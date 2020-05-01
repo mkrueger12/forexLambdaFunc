@@ -5,6 +5,7 @@ import boto3
 import json
 
 def lambda_handler(event,context):
+    '''Lambda function for AWS Lambda. Results in automated data scrape'''
     print(context)
     key = API_KEY
     curr1 = 'EUR'
@@ -12,7 +13,7 @@ def lambda_handler(event,context):
     file = f'{curr1}_{curr2}_{datetime.now().strftime("%d-%m-%Y")}.json'
 
     #Scrape Data
-    data = forex_scrape_intraday(curr1,curr2,'1min',key)
+    data = forexScrapeIntraday(curr1,curr2,'1min',key)
 
     #Write to s3
     s3 = boto3.resource('s3')
