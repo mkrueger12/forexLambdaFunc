@@ -1,7 +1,6 @@
 import boto3
 import json
 
-
 def read_s3_json_file(bucket_name, key):
     s3_obj = boto3.client('s3')
     s3_clientobj = s3_obj.get_object(Bucket=bucket_name, Key=key)
