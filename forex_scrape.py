@@ -1,6 +1,6 @@
 import requests
 
-def forex_scrape_intraday(from_currency,to_currency,interval,key):
+def forexScrapeIntraday(from_currency,to_currency,interval,key):
     ''' Function to scrape intraday forex data from alphavantage '''
     f_curr = from_currency
     to_curr = to_currency
